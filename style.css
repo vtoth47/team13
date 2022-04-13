@@ -7,9 +7,9 @@ body {
     width: 100px;
 }
 /*NAVBAR STYLING*/
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: white;
-    color:#212529  !important;
+.nav-pills .nav-link.active {
+    background-color: rgb(255, 165, 0);
+    color: white !important;
 }
 
 /*COVER PHOTO STYLING*/
@@ -23,6 +23,11 @@ body {
 }
 .covertext{
     background-color: rgba(33,37,41, 0.5);
+    position:absolute;
+    right:0;
+    bottom:0;
+    width: 100%;
+    margin:0;
 }
 
 /*TEAM PAGE STYLING*/
