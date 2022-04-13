@@ -1,0 +1,51 @@
+/*GENERAL STYLING */
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.logo {
+    width: 100px;
+}
+/*NAVBAR STYLING*/
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: white;
+    color:#212529  !important;
+}
+
+/*COVER PHOTO STYLING*/
+.cover {
+    min-height: 300px;
+    background: url('https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+.covertext{
+    background-color: rgba(33,37,41, 0.5);
+}
+
+/*TEAM PAGE STYLING*/
+.card-image-top {
+    max-width: 100%;
+}
+
+/*EXPLORATION PAGE STYLING*/
+.screenshot {
+    max-width: 100%;
+}
+
+.caption {
+    color:gray;
+    font-style: italic;
+}
+
+/*Solution page styling*/
+.embed {
+    border: none;
+    height: 900px;
+    width: 100%;
+}
+
+
+
