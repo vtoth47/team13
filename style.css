@@ -6,10 +6,23 @@ body {
 .logo {
     width: 100px;
 }
-/*NAVBAR STYLING*/
+/*NAVBAR & BUTTON STYLING*/
 .nav-pills .nav-link.active {
     background-color: rgb(255, 165, 0);
     color: white !important;
+}
+
+.tryme { /* This is styling for the "Try It" Button linking to final solutions */
+    background-color: rgb(255, 165, 0);
+    color: white !important;
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    transition: 0.4s;
+}
+
+.tryme:hover {
+    background-color: rgb(170, 111, 0);
 }
 
 /*COVER PHOTO STYLING*/
@@ -44,13 +57,4 @@ body {
     color:gray;
     font-style: italic;
 }
-
-/*Solution page styling*/
-.embed {
-    border: none;
-    height: 900px;
-    width: 100%;
-}
-
-
 
