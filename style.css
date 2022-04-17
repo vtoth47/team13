@@ -9,20 +9,44 @@ body {
 /*NAVBAR & BUTTON STYLING*/
 .nav-pills .nav-link.active {
     background-color: rgb(255, 165, 0);
-    color: white !important;
+    color: white;
+    text-decoration: none;
+}
+
+.sectiontab{
+    color: rgb(112, 112, 112);
+}
+
+.sectiontab:hover{
+    color:rgb(177, 177, 177);
+}
+
+.sectiontab.active{
+    color: black;
+    font-weight: bold;
+}
+
+.imgtab{
+    color: rgb(112, 112, 112);
+}
+
+.imgtab:hover{
+    color:rgb(177, 177, 177)
 }
 
 .tryme { /* This is styling for the "Try It" Button linking to final solutions */
     background-color: rgb(255, 165, 0);
-    color: white !important;
+    color: white;
     width: 100%;
     max-width: 900px;
     display: block;
     transition: 0.4s;
 }
 
+
 .tryme:hover {
     background-color: rgb(170, 111, 0);
+    color: white;
 }
 
 /*COVER PHOTO STYLING*/
