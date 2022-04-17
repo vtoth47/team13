@@ -206,24 +206,25 @@
                 <div class="tab-content">
                   <div class="tab-pane container text-center active" id="image12">
                     <img src="images/FourthDemo_ExB.png" class="rounded screenshot" alt="First Demo">
-                    <p class="caption">The first iteration of our Experience Builder.</p>
+                    <p class="caption">By switching from a query widget to a filter widget (customized with a SQL expression to select species from a list). The new tree inventory allows the user to select only certain species to be visualized on the map. The text on the left shows the number of species selected, the total number of trees, average canopy area and canopy coverage in percentage (calculated with the transparent vector grid layer)</p>
                   </div>
                   <div class="tab-pane container text-center fade" id="image13">
                     <img src="images/FourthDemo_2_ExB.png" class="rounded screenshot" alt="This is a test screenshot.">
-                    <p class="caption">Landing page for the second interation.</p>
+                    <p class="caption">This image shows the Tree Inventory when the filter is used. By adding actions on the map frame to filter by extent, then connecting the text and donut chart to those layers the result is an automated interactive display. </p>
                   </div>
                   <div class="tab-pane container text-center fade" id="image14">
                     <img src="images/FourthDemo_3_ExB.png" class="rounded screenshot" alt="This is a test screenshot.">
-                    <p class="caption">Main page for the second iteration, note the widget toolbar, and the canopies.</p>
+                    <p class="caption">The updated Neighborhood/ Park View is still using the same lists connected to the map frame, but the text is updated to show more detailed information about each selected park or neighborhood. Overlayed on the map on the bottom left is a text widget that, like the Tree Inventory View, calculates the current canopy cover in percentage. </p>
                   </div>
                   <div class="tab-pane container text-center fade" id="image002">
                     <img src="images/ThirdDemo_5_ExB.png" class="rounded screenshot" alt="This is a test screenshot.">
-                    <p class="caption">Main page for the second iteration, note the widget toolbar, and the canopies.</p>
+                    <p class="caption">The final Service Request survey made using Survey123. It has more specific questions regarding the status of the tree of interest. This survey takes the TreeID and the location information from the selected tree. This allows Beaumont to have as much information as possible about the service request. </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-7">
-                <p>Will discuss the chart, the lack of data, but how at this point its promising because of the default widgets</p>
+                <p>Instead of creating a widget to calculate the area of the current map extent, Team.13 created a transparent grid vector layer in ArcGIS Pro, with each grid being 30m x 30m. While not technically the area of the current extent, the sum of the area of each grid in view is accurate enough. It would have been optimal to create a transparent raster layer at a fine resolution, but it would only allow it to be published as a tile layer (which cannot be queried for analysis). </p>
+                <p>The fourth iteration is our final solution with the exception of fine tuning the appearance of the page to match Beaumont’s theme on their web pages. </p>
                 <h5>Key Takeaways</h5>
                 <ul>
                   <li> Easy method of customizing interaction with a web map</li>
