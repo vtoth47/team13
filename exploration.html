@@ -236,11 +236,14 @@
           <div class="tab-pane" id="dev">
             <div class="col-md">
               <h2>Experience Builder for Developers</h2>
-              <p>Will discuss the chart, the lack of data, but how at this point its promising because of the default widgets</p>
+              <p>The team opted to look into the locally installed version of Experience Builder to investigate possible solutions for obtaining the area of the current map extent. </p>
+              <p>Esri’s supplied documentation for Experience Builder for Developers was enough to get it to run locally. The key is to run the Node.js Command Prompt, not the default windows one. Once npm in installed on the client and server folders https://localhost:3001 directs the user to their locally deployed Experience Builder. </p>
+              <p>Here the team ran into additional roadblocks, we were unable to import the beta version of our Experience Builder. Additionally, the team tried to save the previous experience builder as a template and then import that, however this failed as template was “built with a higher version of ArcGIS Experience Builder…”</p>
+              <p>To continue with this exact template reinstalling Experience Builder for Developers seemed to be the only path.  However a simpler solution was discovered; to acquire the area of the current extent instead of customizing a widget we created a grid vector layer (see Iteration 4). </p>
               <h5>Key Takeaways</h5>
               <ul>
-                <li> Easy method of customizing interaction with a web map</li>
-                <li> Alot of Esri's documentation for Experience Builder is not too helpful with niche applications of the default widgets</li>
+                <li> Allows for customized widgets that tailor the experience for the desired purpose</li>
+                <li> Due to a new solution for extent area, this was deemed unnecessary for our solution</li>
               </ul>
             </div>
           </div>
