@@ -160,24 +160,26 @@
                 <div class="tab-content">
                   <div class="tab-pane container text-center active" id="image9">
                     <img src="images/ThirdDemo_ExB.png" class="rounded screenshot" alt="First Demo">
-                    <p class="caption">The first iteration of our Experience Builder.</p>
+                    <p class="caption">Added features include a query widget that allows the user to select any of the species in the tree inventory, as well as a height and diameter, to filter the added donut chart and the text on the view.  The query can be limited by the current map extent or a drawn graphic. The chart filters based on the map extent, so if a certain species was selected in the query but was not present in the current extent, it would not appear on the chart. </p>
                   </div>
                   <div class="tab-pane container text-center fade" id="image10">
                     <img src="images/ThirdDemo_3_ExB.png" class="rounded screenshot" alt="This is a test screenshot.">
-                    <p class="caption">Landing page for the second interation.</p>
+                    <p class="caption">An action was set up on the map frame to filter neighborhoods, parks, and trees based on the extent of the map. Then two separate list widgets were added and connected to the map frame, thereby filtering the lists to only show the parks/ neighborhoods within the current extent. Text connected to the map features was also added to calculate canopy cover, number of trees, as well as the park and neighborhood in view. </p>
                   </div>
                   <div class="tab-pane container text-center fade" id="image11">
                     <img src="images/ThirdDemo_4_ExB.png" class="rounded screenshot" alt="This is a test screenshot.">
-                    <p class="caption">Main page for the second iteration, note the widget toolbar, and the canopies.</p>
+                    <p class="caption">The survey for this view was set up to automatically take the AssetID of the selected tree on the map. As well as a section to add comments on the reason for the service request. </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-7">
-                <p>Will discuss the chart, the lack of data, but how at this point its promising because of the default widgets</p>
+                <p>Through our contact at Beaumont we obtained the current tree inventory and the city’s base data (neighborhoods, parks, trails, lakes, streets and city boundary). With updated data, the team ran the same calculation to simulate canopy.</p>
+                <p>It was during this iteration that the full functionality of Experience Builder, with relation to our proposed solution, was realized. The web application was sectioned into the three views (Tree Inventory, Neighborhoods/Parks, and the Service Request. </p>
+                <p>However, this iteration was also limited in that the calculation of canopy cover in the Neighborhoods/ Parks view was not always accurate. It was believed that acquiring the area of the map extent would require a customized widget, as such the calculation of canopy cover uses the area of the neighborhood. This makes the calculation accurate if only one neighborhood is in the extent, otherwise it will always take the area of the first neighborhood in the list widget.  </p>
                 <h5>Key Takeaways</h5>
                 <ul>
-                  <li> Easy method of customizing interaction with a web map</li>
-                  <li> Alot of Esri's documentation for Experience Builder is not too helpful with niche applications of the default widgets</li>
+                  <li> With the updated data from our client, this iteration is much closer to the final solution with the three views.</li>
+                  <li> Calculating canopy cover is limited to the area of the first neighborhood in the list. </li>
                 </ul>
               </div>
             </div>
