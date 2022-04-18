@@ -89,6 +89,9 @@
           <li class="nav-item">
             <a class="nav-link sectiontab" data-bs-toggle="tab" href="#dev">Developer Edition</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link sectiontab" data-bs-toggle="tab" href="#survey">Survey123 Integration</a>
+          </li>
         </ul>
         <!-- Iteration Tabs-->
         <div class="tab-content mt-3">
@@ -173,7 +176,7 @@
                 </div>
               </div>
               <div class="col-md-7">
-                <p>Through our contact at Beaumont we obtained the current tree inventory and the city’s base data (neighborhoods, parks, trails, lakes, streets and city boundary). With updated data, the team ran the same calculation to simulate canopy.</p>
+                <p>Through our contact at Beaumont we obtained the current tree inventory and the city's base data (neighborhoods, parks, trails, lakes, streets and city boundary). With updated data, the team ran the same calculation to simulate canopy.</p>
                 <p>It was during this iteration that the full functionality of Experience Builder, with relation to our proposed solution, was realized. The web application was sectioned into the three views (Tree Inventory, Neighborhoods/Parks, and the Service Request. </p>
                 <p>However, this iteration was also limited in that the calculation of canopy cover in the Neighborhoods/ Parks view was not always accurate. It was believed that acquiring the area of the map extent would require a customized widget, as such the calculation of canopy cover uses the area of the neighborhood. This makes the calculation accurate if only one neighborhood is in the extent, otherwise it will always take the area of the first neighborhood in the list widget.  </p>
                 <h5>Key Takeaways</h5>
@@ -224,10 +227,10 @@
               </div>
               <div class="col-md-7">
                 <p>Instead of creating a widget to calculate the area of the current map extent, Team.13 created a transparent grid vector layer in ArcGIS Pro, with each grid being 30m x 30m. While not technically the area of the current extent, the sum of the area of each grid in view is accurate enough. It would have been optimal to create a transparent raster layer at a fine resolution, but it would only allow it to be published as a tile layer (which cannot be queried for analysis). </p>
-                <p>The fourth iteration is our final solution with the exception of fine tuning the appearance of the page to match Beaumont’s theme on their web pages. </p>
+                <p>The fourth iteration is our final solution with the exception of fine tuning the appearance of the page to match Beaumont's theme on their web pages. </p>
                 <h5>Key Takeaways</h5>
                 <ul>
-                  <li> Taking full advantage of Experience Builder, for our solution, required workarounds that could not be found anywhere using Esri’s supplied documentation.</li>
+                  <li> Taking full advantage of Experience Builder, for our solution, required workarounds that could not be found anywhere using Esri's supplied documentation.</li>
                   <li> This iteration has the complete data, and all the widgets are set up for the final solution. </li>
                 </ul>
               </div>
@@ -238,7 +241,7 @@
             <div class="col-md">
               <h2>Experience Builder for Developers</h2>
               <p>The team opted to look into the locally installed version of Experience Builder to investigate possible solutions for obtaining the area of the current map extent. </p>
-              <p>Esri’s supplied documentation for Experience Builder for Developers was enough to get it to run locally. The key is to run the Node.js Command Prompt, not the default windows one. Once npm in installed on the client and server folders https://localhost:3001 directs the user to their locally deployed Experience Builder. </p>
+              <p>Esri's supplied documentation for Experience Builder for Developers was enough to get it to run locally. The key is to run the Node.js Command Prompt, not the default windows one. Once npm in installed on the client and server folders https://localhost:3001 directs the user to their locally deployed Experience Builder. </p>
               <p>Here the team ran into additional roadblocks, we were unable to import the beta version of our Experience Builder. Additionally, the team tried to save the previous experience builder as a template and then import that, however this failed as template was “built with a higher version of ArcGIS Experience Builder…”</p>
               <p>To continue with this exact template reinstalling Experience Builder for Developers seemed to be the only path.  However a simpler solution was discovered; to acquire the area of the current extent instead of customizing a widget we created a grid vector layer (see Iteration 4). </p>
               <h5>Key Takeaways</h5>
@@ -246,6 +249,41 @@
                 <li> Allows for customized widgets that tailor the experience for the desired purpose</li>
                 <li> Due to a new solution for extent area, this was deemed unnecessary for our solution</li>
               </ul>
+            </div>
+          </div>
+          <!--Survey123 Tab-->
+          <div class="tab-pane" id="survey">
+            <div class="row">
+              <div class="col-md-5">
+                <ul class="nav nav-pills justify-content-center mb-2">
+                  <li class="nav-item">
+                    <a class="nav-link imgtab active" data-bs-toggle="tab" href="#survey1">Finalized Survey View</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#survey2">Survey123 Appearance</a>
+                  </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane container text-center active" id="survey1">
+                    <img src="images/survey1.png" class="rounded screenshot" alt="Survey Widget implementation">
+                    <p class="caption">The survey implemented with finalized symbology in the Experience. The Survey Widget has an option to not use a survey's assigned style, but unfortunately this option does not match the survey styling to the Experience styling.</p>
+                  </div>
+                  <div class="tab-pane container text-center fade" id="survey2">
+                    <img src="images/survey2.png" class="rounded screenshot" alt="Survey123 View">
+                    <p class="caption">This image shows the survey within Survey123. The team noted that certain question types appear slightly diferent in this view, as opposed to within the Survey Widget.</p>
+                  </div>
+                </div>      
+              </div>
+              <div class="col-md-7">
+                <p>Implementation of Survey123 was a stretch goal for the team, as initially this integration seemed fairly complex. However, a “Survey” widget was discovered within Experience Builder that could seamlessly link a published ArcGIS Survey into the experience. Furthermore, the team discovered that the survey widget can be linked directly to map widgets within the experience, and a data connection can be established between the survey and a particular layer. When this connection is set, if the user selects a feature in the given layer within the map, questions in the survey will be auto-populated with data on that feature. Furthermore, by linking a “Location” question to a feature layer's shape field, the feature's spatial information can be copied over directly to the survey's results feature layer. By combining this data linking functionality with hidden questions in the constructed survey, it is possible to populate a large amount of feature attribute information to the survey when the user selects a feature, without cluttering the user interface.</p>
+                <p>This also suggests an exciting possibility, for future extensions of Team.13's work: because the Survey can receive location information, a live map of all submitted service requests can be integrated into a separate ArcGIS Experience view, for use by City of Beaumont internal staff. While not required for this particular implementation, this is something the team plans to incorporate in the larger implementation of the Collaborative Project.</p>
+                <h3>Key Takeaways</h3>
+                <ul>
+                  <li>The Experience Builder Survey Widget makes integrating Survey123 surveys a simple process.</li>
+                  <li>The Survey widget has slightly modified symbology compared to viewing the survey in Survey123.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
