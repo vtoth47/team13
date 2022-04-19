@@ -271,6 +271,9 @@
                   <li class="nav-item">
                     <a class="nav-link imgtab" data-bs-toggle="tab" href="#survey2">Survey123 Appearance</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#survey3">Survey123 Back End</a>
+                  </li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
@@ -281,6 +284,10 @@
                   <div class="tab-pane container text-center fade" id="survey2">
                     <img src="images/Survey2.png" class="rounded screenshot" alt="Survey123 View">
                     <p class="caption">This image shows the survey within Survey123. The team noted that certain question types appear slightly diferent in this view, as opposed to within the Survey Widget.</p>
+                  </div>
+                  <div class="tab-pane container text-center fade" id="survey3">
+                    <img src="images/Survey3.png" class="rounded screenshot" alt="Survey123 Backend View">
+                    <p class="caption">This image shows the resulting survey records after survey submission. Although not technically part of this solution, this item is available for review <a href="https://survey123.arcgis.com/surveys/f04412be792e428a8712c841e93302a7/overview" target="_blank" class="link-dark">here</a>.</p>
                   </div>
                 </div>      
               </div>
@@ -301,7 +308,7 @@
     <!-- ArcGIS Story Maps & Scene Viewer -->
       <div class="row py-3">
         <h1>Story Maps & Sceneviewer</h1>
-        <p>ArcGIS Story Maps are visually appealing way to communicate a topic while seamlessly integrating web maps.</p>
+        <p>ArcGIS Story Maps are a visually appealing way to communicate a topic while seamlessly integrating web maps.</p>
         <div class="col-lg-5">
           <ul class="nav nav-pills mb-2 justify-content-center">
             <li class="nav-item">
@@ -332,20 +339,20 @@
         </div>
         <div class="col-lg-7">
           <p>The Story Map can be configured as a continuously scrolling web page that can logically tell the story of your topic. For our project, the City of Beaumont would like to use a Story Map as a means of communicating their Urban Forest Management Strategy (UFMS) to the public.</p>
-          <p>In addition to including facts and information from Beaumont's UFMS, we wanted to provide the public with an interactive way of visualizing the cities current tree inventory. To accomplish this, a 3D Web Scene was created in ArcGIS Scene Viewer that includes City base data, as well as the Tree Inventory.</p>
+          <p>In addition to including facts and information from Beaumont's UFMS, we wanted to provide the public with an interactive way of visualizing the city's current tree inventory. To accomplish this, a 3D Web Scene was created in ArcGIS Scene Viewer that includes City base data, as well as the Tree Inventory.</p>
           <p>To improve the visual appearance of the scene, the trees were styled appropriately to represent 3D trees with heights taken from the height field of the data. This gives a more realistic appearance, and the user can easily distinguish younger trees from more mature trees throughout the city. Our aim is to style the trees more realistically according to species as well including views that highlight specific parks that would benefit from additional tree coverage.</p>
           <h3>Key Takeaways</h3>
           <ul>
             <li>Story Maps can help communicate a topic in a visually appealing way.</li>
             <li>Their power comes from map integration.</li>
-            <li>3D Scenes provide additional user interactivity to help communicate the concept.</li>
+            <li>3D Scenes provide additional user interactivity to help communicate concepts.</li>
           </ul>
         </div>
       </div>
       <!-- Integration -->
       <div class="row py-3">
         <h1>Experience and Story Map Integration</h1>
-        <p>Once the Story Map and Experience Builder implementations were finalized, the final steps were to integrate them with one another.</p>
+        <p>Once the Story Map and Experience Builder implementations were finalized, the final step was to integrate them with one another.</p>
         <div class="col-lg-5">
           <ul class="nav nav-pills mb-2 justify-content-center">
             <li class="nav-item">
@@ -368,8 +375,8 @@
           </div>
         </div>
         <div class="col-lg-7">
-          <p>Initially, the Team hoped to accomplish integration by placing both solutions in HTML iframes, and use an HTML page as a wrapper with navigation tabs to allow the user to seamlessly switch between the Story Map and the Experience. However, when this solution was tested, it quickly became clear that iframes caused a number of issues, including sluggish and unpredictable Experience functionality. Occasionally, one or both of the implementations would fail to load at all. Pivoting away from this approach, the team elected to simply create hyperlinks within the Experience and Story Map, allowing users to navigate between the two.</p>
-          <p>One additional issue in integration the team noted was that Experience Builder has much more limited style settings than Story Maps. In particular, Experience Builder has a very limited number of fonts available, and is missing many of the fonts included in the Story Maps builder. This was disappointing, as the team hoped to make the Story Map and Experience Builder aesthetics as similar as possible. While the team strived to match colour schemes where possible for this implementation, the team did not that Experience Builder for Developers allows for much more customization of an Experience, including importing custom fonts. The team intends to explore this further for the Collaborative Project implementation.</p>
+          <p>Initially, the Team hoped to accomplish integration by placing both solutions in HTML iframes, and using an HTML page as a wrapper with navigation tabs to allow the user to seamlessly switch between the Story Map and the Experience. However, when this solution was tested, it quickly became clear that iframes caused a number of issues, including sluggish and unpredictable Experience functionality. Occasionally, one or both of the implementations would fail to load at all. Pivoting away from this approach, the team elected to simply create hyperlinks within the Experience and Story Map, allowing users to navigate between the two.</p>
+          <p>One additional issue in integration the team noted was that Experience Builder has limited style options. In particular, Experience Builder has a very small number of fonts available, and is missing many of the fonts included in the Story Maps builder. This was disappointing, as the team hoped to make the Story Map and Experience Builder aesthetics as similar as possible. While the team strived to match colour schemes where possible for this implementation, the team did note that Experience Builder for Developers allows for much more customization of an Experience's appearance, including importing custom fonts and stylesheets. The team intends to explore this further for the Collaborative Project implementation.</p>
           <h3>Key Takeaways</h3>
           <ul>
             <li>Iframes are not an effective way to implement Experiences/Story Maps within a website.</li>
