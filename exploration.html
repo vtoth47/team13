@@ -101,16 +101,19 @@
               <div class="col-lg-5">
                 <ul class="nav nav-pills mb-2 justify-content-center">
                   <li class="nav-item">
-                    <a class="nav-link imgtab active" data-bs-toggle="tab" href="#image3">1. Main Page</a>
+                    <a class="nav-link imgtab active" data-bs-toggle="tab" href="#image3">1: Main Page</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image4">2. Welcome</a>
+                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image3p5">1.5: View Testing</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image5">2. Main Page</a>
+                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image4">2: Welcome</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image001">2. Feedback Survey</a>
+                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image5">2: Main Page</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image001">2: Feedback Survey</a>
                   </li>
                 </ul>
                 <!-- Tab panes -->
@@ -118,6 +121,10 @@
                   <div class="tab-pane container-md text-center active" id="image3">
                     <img src="images/FirstDemo_ExB.png" class="rounded screenshot" alt="First Demo">
                     <p class="caption">The first iteration of our Experience Builder. A chart was the only widget used that showed any statistics on the tree inventory. The web map used in this iteration was referencing the outdated tree inventory on Beaumonts Rest Services.</p>
+                  </div>
+                  <div class="tab-pane container-md text-center" id="image3p5">
+                    <img src="images/1p5Demo_ExB.png" class="rounded screenshot" alt="1.5 Demo">
+                    <p class="caption">A separately developed iteration, exploring implementation of views. Included a "Zone" view that let users browse through a list of different tree inventory zones, with the map panning to each one when selected.</p>
                   </div>
                   <div class="tab-pane container text-center fade" id="image4">
                     <img src="images/SecondDemo_ExB.png" class="rounded screenshot" alt="Second Demo">
@@ -134,12 +141,12 @@
                 </div>
               </div>
               <div class="col-lg-7">
-                <p>From our first two iterations it was clear that Experience Builder was going to be used in the final solution. The ability to interact with the map through the default widgets was simple to integrate. However at this point in time the web application was lacking the specified views for Tree Inventory, Neighborhoods, and a Service Request. The widgets were not modified in any way to allow the user to filter by tree species or change the chart.</p>
+                <p>From our early iterations it was clear that Experience Builder was going to be used in the final solution. Through its widgets, it presented more advanced functionality than ArcGIS Dashboards, while the simple Builder user interface meant interactions between the map and default widgets was simple to implement. At this early exploratory phase, the team worked on a number of iterations simultaneously, exploring different aspects of Experience Builder functionality, including chart widgets, multiple views, and survey integration. These early iterations featured widgets with largely default settings, which were not modified in any way to allow the user to filter by tree species or change the chart.</p>
                 <p></p>
                 <h5>Key Takeaways</h5>
                 <ul>
                   <li> Easy method of customizing interaction with a web map</li>
-                  <li> Alot of Esri's documentation for Experience Builder is not too helpful with niche applications of the default widgets</li>
+                  <li> A lot of Esri's documentation for Experience Builder is not too helpful with niche applications of the default widgets</li>
                 </ul>
               </div>
             </div>
@@ -150,13 +157,13 @@
               <div class="col-md-5">
                 <ul class="nav nav-pills justify-content-center mb-2">
                   <li class="nav-item">
-                    <a class="nav-link imgtab active" data-bs-toggle="tab" href="#image9">3. Tree Inventory</a>
+                    <a class="nav-link imgtab active" data-bs-toggle="tab" href="#image9">3: Tree Inventory</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image10">3. Neighborhoods</a>
+                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image10">3: Neighborhoods</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image11">3. Survey</a>
+                    <a class="nav-link imgtab" data-bs-toggle="tab" href="#image11">3: Survey</a>
                   </li>
                 </ul>
                 <!-- Tab panes -->
@@ -176,9 +183,9 @@
                 </div>
               </div>
               <div class="col-md-7">
-                <p>Through our contact at Beaumont we obtained the current tree inventory and the city's base data (neighborhoods, parks, trails, lakes, streets and city boundary). With updated data, the team ran the same calculation to simulate canopy.</p>
+                <p>Through our contact at Beaumont the team obtained a more current tree inventory and the city's base data (neighborhoods, parks, trails, lakes, streets and city boundary). With updated data, the team combined learnings from previous iterations to build a new iteration featuring views, basic survey implementation, and even a basic calculation for canopy cover using area values for neighbourhoods polygons and summing the canopy area of the trees within.</p>
                 <p>It was during this iteration that the full functionality of Experience Builder, with relation to our proposed solution, was realized. The web application was sectioned into the three views (Tree Inventory, Neighborhoods/Parks, and the Service Request. </p>
-                <p>However, this iteration was also limited in that the calculation of canopy cover in the Neighborhoods/ Parks view was not always accurate. It was believed that acquiring the area of the map extent would require a customized widget, as such the calculation of canopy cover uses the area of the neighborhood. This makes the calculation accurate if only one neighborhood is in the extent, otherwise it will always take the area of the first neighborhood in the list widget.  </p>
+                <p>However, this iteration was also limited in that the calculation of canopy cover in the Neighborhoods/ Parks view was not always accurate. It was believed that acquiring the area of the map extent would require a customized widget, and as such the calculation of canopy cover at this stage used the area of the neighborhood. This makes the calculation accurate if only one neighborhood is in the extent, otherwise it will always take the area of the first neighborhood in the neighbourhood list widget, which will not represent screen extent.</p>
                 <h5>Key Takeaways</h5>
                 <ul>
                   <li> With the updated data from our client, this iteration is much closer to the final solution with the three views.</li>
@@ -226,7 +233,8 @@
                 </div>
               </div>
               <div class="col-md-7">
-                <p>Instead of creating a widget to calculate the area of the current map extent, Team.13 created a transparent grid vector layer in ArcGIS Pro, with each grid being 30m x 30m. While not technically the area of the current extent, the sum of the area of each grid in view is accurate enough. It would have been optimal to create a transparent raster layer at a fine resolution, but it would only allow it to be published as a tile layer (which cannot be queried for analysis). </p>
+                <p>While custom-coding a widget to address the issues regarding calculating canopy cover for the map extent was beyond the scope of this project, it was suggested to the team that they might be able to more easily make this calculation by applying a raster to the map and calculating the sum area of cells within the current map extent, to compare with the sum canopy area of all trees within the extent. The team explored this option, but was unfortunately only able to publish rasters as tile layers, which cannot be queried for analysis. Instead, the team came up with the solution of using the Create Fishnet geoprocessing tool in ArcGIS Pro to generate a vector grid that would serve the same base purpose.</p>
+                <p>Taking this approach, Team.13 created a transparent grid vector layer in ArcGIS Pro, with each cell sized at 30m x 30m. While not providing the exact area of the current extent (due to this resolution), the team found the sum of the area of each cell in view to be accurate enough for the simple percentage cover calculation being performed. The team did note that the addition of this large vector layer caused some stuttering in map zooming and panning, but not enough to significantly disrupt user experience. </p>
                 <p>The fourth iteration is our final solution with the exception of fine tuning the appearance of the page to match Beaumont's theme on their web pages. </p>
                 <h5>Key Takeaways</h5>
                 <ul>
@@ -281,7 +289,7 @@
                 <h3>Key Takeaways</h3>
                 <ul>
                   <li>The Experience Builder Survey Widget makes integrating Survey123 surveys a simple process.</li>
-                  <li>The Survey widget has slightly modified symbology compared to viewing the survey in Survey123.</li>
+                  <li>The Survey Widget has a slightly modified appearance compared to viewing the survey in Survey123.</li>
                 </ul>
               </div>
             </div>
@@ -333,7 +341,41 @@
           </ul>
         </div>
       </div>
-      
+      <!-- Integration -->
+      <div class="row py-3">
+        <h1>Experience and Story Map Integration</h1>
+        <p>Once the Story Map and Experience Builder implementations were finalized, the final steps were to integrate them with one another.</p>
+        <div class="col-md-5">
+          <ul class="nav nav-pills mb-2 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link imgtab active" data-bs-toggle="tab" href="#image18">iframe Testing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link imgtab" data-bs-toggle="tab" href="#image19">Story Map 2</a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane container text-center active" id="image18">
+              <img src="images/Integration1.png" class="rounded screenshot" alt="Story Map 1.">
+              <p class="caption">Original Iframe implementation. Scrapped due to instability.</p>
+            </div>
+            <div class="tab-pane container text-center fade" id="image19">
+              <img src="images/Integration2.png" class="rounded screenshot" alt="3D Scene">
+              <p class="caption">Stylized Experience. The team was dissapointed to note that font could not be matched to Story Map font selection.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <p>Initially, the Team hoped to accomplish integration by placing both solutions in HTML iframes, and use an HTML page as a wrapper with navigation tabs to allow the user to seamlessly switch between the Story Map and the Experience. However, when this solution was tested, it quickly became clear that iframes caused a number of issues, including sluggish and unpredictable Experience functionality. Occasionally, one or both of the implementations would fail to load at all. Pivoting away from this approach, the team elected to simply create hyperlinks within the Experience and Story Map, allowing users to navigate between the two.</p>
+          <p>One additional issue in integration the team noted was that Experience Builder has much more limited style settings than Story Maps. In particular, Experience Builder has a very limited number of fonts available, and is missing many of the fonts included in the Story Maps builder. This was disappointing, as the team hoped to make the Story Map and Experience Builder aesthetics as similar as possible. While the team strived to match colour schemes where possible for this implementation, the team did not that Experience Builder for Developers allows for much more customization of an Experience, including importing custom fonts. The team intends to explore this further for the Collaborative Project implementation.</p>
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>Iframes are not an effective way to implement Experiences/Story Maps within a website.</li>
+            <li>Experience Builder has limited style options.</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <!--Footer-->
     <div class="d-flex bg-dark text-white mt-4 py-3 justify-content-center">
