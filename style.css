@@ -3,10 +3,12 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+
+/*NAVBAR & BUTTON STYLING*/
 .logo {
     width: 100px;
 }
-/*NAVBAR & BUTTON STYLING*/
+
 .nav-pills .nav-link.active {
     background-color: rgb(255, 165, 0);
     color: white;
@@ -67,10 +69,6 @@ body {
     margin:0;
 }
 
-/*TEAM PAGE STYLING*/
-.card-image-top {
-    max-width: 100%;
-}
 
 /*EXPLORATION PAGE STYLING*/
 .screenshot {
