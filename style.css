@@ -52,14 +52,33 @@ body {
 }
 
 /*COVER PHOTO STYLING*/
-.cover {
-    min-height: 300px;
+.coverteam {
     background: url('https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c');
+    min-height: 300px;
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
     background-attachment: fixed;
 }
+
+.coverexplore {
+    background: url('images/Beaumont-Sign.jpg');
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.coverhome {
+    background: url('images/Beaumont-Sign.jpg');
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
 .covertext{
     background-color: rgba(33,37,41, 0.5);
     position:absolute;
