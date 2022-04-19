@@ -54,11 +54,11 @@
       <div class="row py-3">
         <h1 class="">ArcGIS Dashboards</h1>
           <p>The first solution Team.13 explored was ArcGIS Dashboards. Although initially promising, the team eventually decided to pivot to the more powerful ArcGIS Experience Builder.</p>
-        <div class="col-md-5">
+        <div class="col-lg-5">
           <img src="images/Dashboard.JPG" class="rounded screenshot" alt="City of Beaumont Tree Dashboard">
           <p class="caption">City of Beaumont Tree Inventory Dashboard.</p>        
         </div>
-        <div class="col-md-7">
+        <div class="col-lg-7">
           <p>ArcGIS Dashboards offer a quick and simple way to visualize data in an interactive way. The core of the dashboard is the map which displays the data. For our project, we needed a solution that would display the current tree inventory of the City of Beaumont and provide some information about what is being displayed on the map.</p>
           <p>The fastest way to achieve this was to create a simple map in ArcGIS Pro that contained the tree feature class. The map was then published to ArcGIS Online as a web map that is used as the main map in the Dashboard. The total number of trees, species, and amount of each species in the current extent is displayed and updates as the user zooms and pans around the city. </p>
           <p>Dashboards are quick and simple but also lack advanced functionality. For example, the user does not have a way of filtering or only selecting a certain species of tree. Charting of many different species (as in the case of Beaumont) becomes challenging to display effectively on one chart. A cap on the maximum number of categories to be displayed on the chart had to be implemented or it would become too crowded and not legible. In the end, we decided that ArcGIS Dashboards lacked the amount of functionality that would be needed in our project scope.</p>
@@ -155,7 +155,7 @@
           <!--Iteration 3 tab-->
           <div class="tab-pane" id="iter3">
             <div class="row">
-              <div class="col-md-5">
+              <div class="col-lg-5">
                 <ul class="nav nav-pills justify-content-center mb-2">
                   <li class="nav-item">
                     <a class="nav-link imgtab active" data-bs-toggle="tab" href="#image9">3: Tree Inventory</a>
@@ -183,7 +183,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-7">
+              <div class="col-lg-7">
                 <p>Through our contact at Beaumont the team obtained a more current tree inventory and the city's base data (neighborhoods, parks, trails, lakes, streets and city boundary). With updated data, the team combined learnings from previous iterations to build a new iteration featuring views, basic survey implementation, and even a basic calculation for canopy cover using area values for neighbourhoods polygons and summing the canopy area of the trees within.</p>
                 <p>It was during this iteration that the full functionality of Experience Builder, with relation to our proposed solution, was realized. The web application was sectioned into the three views (Tree Inventory, Neighborhoods/Parks, and the Service Request. </p>
                 <p>However, this iteration was also limited in that the calculation of canopy cover in the Neighborhoods/ Parks view was not always accurate. It was believed that acquiring the area of the map extent would require a customized widget, and as such the calculation of canopy cover at this stage used the area of the neighborhood. This makes the calculation accurate if only one neighborhood is in the extent, otherwise it will always take the area of the first neighborhood in the neighbourhood list widget, which will not represent screen extent.</p>
@@ -198,7 +198,7 @@
           <!--Iteration 4 tab-->
           <div class="tab-pane" id="iter4">
             <div class="row">
-              <div class="col-md-5">
+              <div class="col-lg-5">
                 <ul class="nav nav-pills justify-content-center mb-2">
                   <li class="nav-item">
                     <a class="nav-link imgtab active" data-bs-toggle="tab" href="#image12">4. Default Tree Inventory</a>
@@ -233,7 +233,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-7">
+              <div class="col-lg-7">
                 <p>While custom-coding a widget to address the issues regarding calculating canopy cover for the map extent was beyond the scope of this project, it was suggested to the team that they might be able to more easily make this calculation by applying a raster to the map and calculating the sum area of cells within the current map extent, to compare with the sum canopy area of all trees within the extent. The team explored this option, but was unfortunately only able to publish rasters as tile layers, which cannot be queried for analysis. Instead, the team came up with the solution of using the Create Fishnet geoprocessing tool in ArcGIS Pro to generate a vector grid that would serve the same base purpose.</p>
                 <p>Taking this approach, Team.13 created a transparent grid vector layer in ArcGIS Pro, with each cell sized at 30m x 30m. While not providing the exact area of the current extent (due to this resolution), the team found the sum of the area of each cell in view to be accurate enough for the simple percentage cover calculation being performed. The team did note that the addition of this large vector layer caused some stuttering in map zooming and panning, but not enough to significantly disrupt user experience. </p>
                 <p>The fourth iteration is our final solution with the exception of fine tuning the appearance of the page to match Beaumont's theme on their web pages. </p>
@@ -247,7 +247,7 @@
           </div>
           <!--Developer tab-->
           <div class="tab-pane" id="dev">
-            <div class="col-md">
+            <div class="col-lg">
               <h2>Experience Builder for Developers</h2>
               <p>The team opted to look into the locally installed version of Experience Builder to investigate possible solutions for obtaining the area of the current map extent. </p>
               <p>Esri's supplied documentation for Experience Builder for Developers was enough to get it to run locally. The key is to run the Node.js Command Prompt, not the default windows one. Once npm in installed on the client and server folders https://localhost:3001 directs the user to their locally deployed Experience Builder. </p>
@@ -263,7 +263,7 @@
           <!--Survey123 Tab-->
           <div class="tab-pane" id="survey">
             <div class="row">
-              <div class="col-md-5">
+              <div class="col-lg-5">
                 <ul class="nav nav-pills justify-content-center mb-2">
                   <li class="nav-item">
                     <a class="nav-link imgtab active" data-bs-toggle="tab" href="#survey1">Finalized Survey View</a>
@@ -284,7 +284,7 @@
                   </div>
                 </div>      
               </div>
-              <div class="col-md-7">
+              <div class="col-lg-7">
                 <p>Implementation of Survey123 was a stretch goal for the team, as initially this integration seemed fairly complex. However, a “Survey” widget was discovered within Experience Builder that could seamlessly link a published ArcGIS Survey into the experience. Furthermore, the team discovered that the survey widget can be linked directly to map widgets within the experience, and a data connection can be established between the survey and a particular layer. When this connection is set, if the user selects a feature in the given layer within the map, questions in the survey will be auto-populated with data on that feature. Furthermore, by linking a “Location” question to a feature layer's shape field, the feature's spatial information can be copied over directly to the survey's results feature layer. By combining this data linking functionality with hidden questions in the constructed survey, it is possible to populate a large amount of feature attribute information to the survey when the user selects a feature, without cluttering the user interface.</p>
                 <p>This also suggests an exciting possibility, for future extensions of Team.13's work: because the Survey can receive location information, a live map of all submitted service requests can be integrated into a separate ArcGIS Experience view, for use by City of Beaumont internal staff. While not required for this particular implementation, this is something the team plans to incorporate in the larger implementation of the Collaborative Project.</p>
                 <h3>Key Takeaways</h3>
@@ -302,7 +302,7 @@
       <div class="row py-3">
         <h1>Story Maps & Sceneviewer</h1>
         <p>ArcGIS Story Maps are visually appealing way to communicate a topic while seamlessly integrating web maps.</p>
-        <div class="col-md-5">
+        <div class="col-lg-5">
           <ul class="nav nav-pills mb-2 justify-content-center">
             <li class="nav-item">
               <a class="nav-link imgtab active" data-bs-toggle="tab" href="#image15">Story Map 1</a>
@@ -330,7 +330,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-lg-7">
           <p>The Story Map can be configured as a continuously scrolling web page that can logically tell the story of your topic. For our project, the City of Beaumont would like to use a Story Map as a means of communicating their Urban Forest Management Strategy (UFMS) to the public.</p>
           <p>In addition to including facts and information from Beaumont's UFMS, we wanted to provide the public with an interactive way of visualizing the cities current tree inventory. To accomplish this, a 3D Web Scene was created in ArcGIS Scene Viewer that includes City base data, as well as the Tree Inventory.</p>
           <p>To improve the visual appearance of the scene, the trees were styled appropriately to represent 3D trees with heights taken from the height field of the data. This gives a more realistic appearance, and the user can easily distinguish younger trees from more mature trees throughout the city. Our aim is to style the trees more realistically according to species as well including views that highlight specific parks that would benefit from additional tree coverage.</p>
@@ -346,7 +346,7 @@
       <div class="row py-3">
         <h1>Experience and Story Map Integration</h1>
         <p>Once the Story Map and Experience Builder implementations were finalized, the final steps were to integrate them with one another.</p>
-        <div class="col-md-5">
+        <div class="col-lg-5">
           <ul class="nav nav-pills mb-2 justify-content-center">
             <li class="nav-item">
               <a class="nav-link imgtab active" data-bs-toggle="tab" href="#image18">iframe Testing</a>
@@ -367,7 +367,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-lg-7">
           <p>Initially, the Team hoped to accomplish integration by placing both solutions in HTML iframes, and use an HTML page as a wrapper with navigation tabs to allow the user to seamlessly switch between the Story Map and the Experience. However, when this solution was tested, it quickly became clear that iframes caused a number of issues, including sluggish and unpredictable Experience functionality. Occasionally, one or both of the implementations would fail to load at all. Pivoting away from this approach, the team elected to simply create hyperlinks within the Experience and Story Map, allowing users to navigate between the two.</p>
           <p>One additional issue in integration the team noted was that Experience Builder has much more limited style settings than Story Maps. In particular, Experience Builder has a very limited number of fonts available, and is missing many of the fonts included in the Story Maps builder. This was disappointing, as the team hoped to make the Story Map and Experience Builder aesthetics as similar as possible. While the team strived to match colour schemes where possible for this implementation, the team did not that Experience Builder for Developers allows for much more customization of an Experience, including importing custom fonts. The team intends to explore this further for the Collaborative Project implementation.</p>
           <h3>Key Takeaways</h3>
