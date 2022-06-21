@@ -1,0 +1,58 @@
+{
+  "1654605612745": {
+    "originalName": "Logo2.png",
+    "fileName": "1654605612745.png",
+    "size": 5201,
+    "url": "${appResourceUrl}/images/widget_22/1654605612745.png",
+    "created": 1654605612745,
+    "resourcesPrefix": "images/widget_22",
+    "referedIds": [],
+    "originId": "1654605612745",
+    "fileFormat": "image/png",
+    "isUseCompress": false,
+    "originalWidth": 690,
+    "originalHeight": 110
+  },
+  "1654605878679": {
+    "originalName": "Logo1.png",
+    "fileName": "1654605878679.png",
+    "size": 5400,
+    "url": "${appResourceUrl}/images/widget_22/1654605878679.png",
+    "created": 1654605878679,
+    "resourcesPrefix": "images/widget_22",
+    "referedIds": [],
+    "originId": "1654605878679",
+    "fileFormat": "image/png",
+    "isUseCompress": false,
+    "originalWidth": 566,
+    "originalHeight": 227
+  },
+  "1655440480972": {
+    "originalName": "icons8-oak-tree-96.png",
+    "fileName": "1655440480972.png",
+    "size": 1177,
+    "url": "${appResourceUrl}/images/widget_38/1655440480972.png",
+    "created": 1655440480972,
+    "resourcesPrefix": "images/widget_38",
+    "referedIds": [],
+    "originId": "1655440480972",
+    "fileFormat": "image/png",
+    "isUseCompress": false,
+    "originalWidth": 96,
+    "originalHeight": 96
+  },
+  "1655440520328": {
+    "originalName": "icons8-evergreen-90.png",
+    "fileName": "1655440520328.png",
+    "size": 975,
+    "url": "${appResourceUrl}/images/widget_40/1655440520328.png",
+    "created": 1655440520328,
+    "resourcesPrefix": "images/widget_40",
+    "referedIds": [],
+    "originId": "1655440520328",
+    "fileFormat": "image/png",
+    "isUseCompress": false,
+    "originalWidth": 90,
+    "originalHeight": 90
+  }
+}
