@@ -12439,7 +12439,7 @@
           "canHome": true,
           "canSearch": false,
           "canNavigation": true,
-          "canFullScreen": true
+          "canFullScreen": false
         },
         "isUseCustomMapState": true,
         "initialMapDataSourceID": "dataSource_5",
@@ -13552,7 +13552,7 @@
           "canHome": true,
           "canSearch": false,
           "canNavigation": true,
-          "canFullScreen": true
+          "canFullScreen": false
         },
         "isUseCustomMapState": true,
         "initialMapDataSourceID": "dataSource_4",
@@ -14574,7 +14574,7 @@
         "media": true,
         "attachments": true,
         "lastEditInfo": true,
-        "noDataMessage": "Select a neighbourhood on the map or table to begin.",
+        "noDataMessage": "Select a street to begin.",
         "styleType": "usePopupDefined",
         "style": {
           "textColor": "",
@@ -14607,7 +14607,7 @@
           "canHome": true,
           "canSearch": false,
           "canNavigation": true,
-          "canFullScreen": true
+          "canFullScreen": false
         },
         "isUseCustomMapState": true,
         "initialMapDataSourceID": "dataSource_2",
@@ -20241,6 +20241,6 @@
       "page_2": []
     }
   ],
-  "timestamp": 1656033073167,
+  "timestamp": 1656040314171,
   "customTheme": {}
 }
