@@ -1,1 +1,0 @@
-define({subMenuExpandMode:"Режим на разширяване на подменюто",mainMenu:"Основно меню",subMenu:"Подменю"});
